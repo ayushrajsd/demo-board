@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .toolbox-cont {
+        height: 5rem;
+        background-color: #4b4b4b;
+        display: flex;
+        align-items: center;
+      }
+      .toolbox-cont > * {
+        margin-left: 4rem;
+      }
+      .toolbox-priority-cont {
+        height: 3.5rem;
+        width: 18rem;
+        background-color: #3d3d3d;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .toolbox-priority-cont > *:hover {
+        background-color: #485460;
+      }
+      .color {
+        height: 1.5rem;
+        width: 3rem;
+      }
+      .lightpink {
+        background-color: lightpink;
+      }
+      .lightgreen {
+        background-color: lightgreen;
+      }
+      .lightblue {
+        background-color: lightblue;
+      }
+      .black {
+        background-color: black;
+      }
+      .action-btn-cont {
+        height: 3.5rem;
+        width: 8rem;
+        background-color: #3d3d3d;
+        display: flex;
+      }
+      .action-btn-cont > * {
+        display: flex;
+        width: 50%;
+        font-size: 2rem;
+        color: white;
+        justify-content: center;
+        align-items: center;
+      }
+      .add-btn:hover,
+      .remove-btn:hover {
+        background-color: #4bb543;
+      }
+      .main-cont {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        padding: 2rem;
+        flex-wrap: wrap;
+
+        /* As many tickets can be added here so this will make sure that the design is neat to accomodate multiple tickets */
+      }
+      .ticket-cont {
+        height: 12rem;
+        width: 15rem;
+        background-color: coral;
+        position: relative;
+      }
+      .ticket-color {
+        height: 1rem;
+      }
+      .ticket-id {
+        background-color: yellow;
+        height: 2rem;
+      }
+      .ticket-lock {
+        /* display: flex; */
+        /* justify-content: flex-end; */
+        /* margin-top: 90px; */
+        /* margin-right: 5px; */
+        font-size: 1.5rem;
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .modal-cont {
+        height: 50vh;
+        width: 45vw;
+        display: none;
+        background-color: lightsalmon;
+        position: absolute;
+        top: 30%;
+        left: 27%;
+      }
+      .textArea-cont {
+        height: 100%;
+        width: 75%;
+        resize: none;
+        outline: none;
+        border: none;
+        background-color: #dfe4ea;
+        font-size: 2rem;
+        color: black;
+        padding: 1rem;
+      }
+      .priority-colors-container {
+        height: 100%;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        background-color: #4b4b4b;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .priority-color {
+        height: 3rem;
+        width: 5rem;
+      }
+      .active {
+        border: 5px solid lightsalmon;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbox-cont">
+      <div class="toolbox-priority-cont">
+        <div class="lightpink color"></div>
+        <div class="lightgreen color"></div>
+        <div class="lightblue color"></div>
+        <div class="black color"></div>
+      </div>
+      <div class="action-btn-cont">
+        <div class="add-btn">
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="remove-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+    </div>
+    <div class="main-cont">
+      <!-- <div class="ticket-cont">
+        <div class="ticket-color"></div>
+        <div class="ticket-id">12345</div>
+        <div class="task-area">Random Task</div>
+        <div class="ticket-lock">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+      </div> -->
+    </div>
+    <div class="modal-cont">
+      <textarea class="textArea-cont" placeholder="Enter Your Task"></textarea>
+      <div class="priority-colors-container">
+        <div class="lightpink priority-color"></div>
+        <div class="lightgreen priority-color"></div>
+        <div class="lightblue priority-color"></div>
+        <div class="black priority-color active"></div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/589957875e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+    <script src="https://unpkg.com/shortid-dist@1.0.5/dist/shortid-2.2.13.min.js"></script>
+  </body>
+</html>
